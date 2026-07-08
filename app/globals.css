@@ -41,8 +41,14 @@
     @apply bg-surface/80 backdrop-blur-md border border-gold/10;
   }
 
+  /*
+   * Cards use a solid-ish surface instead of backdrop-blur: with ~25
+   * card instances on one page, backdrop-filter's Style & Layout cost
+   * dominated main-thread time. .glass (blur) stays reserved for the
+   * sticky header/nav, which actually has scrolling content behind it.
+   */
   .glass-card {
-    @apply glass rounded-2xl shadow-card;
+    @apply bg-surface/95 border border-gold/10 rounded-2xl shadow-card;
   }
 
   .btn {

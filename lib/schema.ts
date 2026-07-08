@@ -43,17 +43,22 @@ export function faqPageSchema(items: FaqItem[]) {
   };
 }
 
-export function breadcrumbListSchema() {
+export type BreadcrumbTrailItem = {
+  name: string;
+  path: string;
+};
+
+export function breadcrumbListSchema(
+  trail: BreadcrumbTrailItem[] = [{ name: "Home", path: "/" }]
+) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteConfig.url,
-      },
-    ],
+    itemListElement: trail.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.path === "/" ? "" : item.path}`,
+    })),
   };
 }

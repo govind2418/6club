@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -43,10 +44,13 @@ export function GameFeatures() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-col items-center gap-3">
           <Button href={REGISTER_URL} external variant="primary">
             Play Now on 6Club
           </Button>
+          <Link href="/6club-game" className="text-sm text-ink/60 hover:text-gold-light">
+            Read the full 6Club game guide &rarr;
+          </Link>
         </div>
       </Container>
     </section>

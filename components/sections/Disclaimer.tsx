@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -32,6 +33,14 @@ export function Disclaimer() {
             problem-gambling helpline.
           </p>
         </GlassCard>
+
+        <p className="mt-6 text-center text-sm text-ink/50">
+          Wondering exactly how we&apos;re connected to 6Club?{" "}
+          <Link href="/6club-official" className="text-gold-light underline underline-offset-2">
+            Read our full answer
+          </Link>
+          .
+        </p>
       </Container>
     </section>
   );

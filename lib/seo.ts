@@ -33,3 +33,34 @@ export const APP_VERSION = "v3.8.2";
 export const APP_UPDATED = "2026-07-01";
 export const APP_SIZE = "38 MB";
 export const APP_MIN_ANDROID = "Android 6.0+";
+
+type PageMetadataInput = {
+  title: string;
+  description: string;
+  path: string;
+};
+
+/**
+ * Builds the per-page slice of Next.js Metadata (title/description/
+ * canonical/OG/Twitter) for a subpage. metadataBase, verification, and
+ * robots defaults already live on the root layout, so pages only need
+ * to override what's actually unique to them.
+ */
+export function buildMetadata({ title, description, path }: PageMetadataInput) {
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.url}${path === "/" ? "" : path}`,
+    },
+    twitter: {
+      title,
+      description,
+    },
+  };
+}

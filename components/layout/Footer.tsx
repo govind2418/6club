@@ -38,7 +38,7 @@ export function Footer() {
           belong to their respective owners. For adults 18+ only.
         </p>
 
-        <p className="text-xs text-ink/40">
+        <p className="text-xs text-ink/60">
           &copy; {new Date().getFullYear()} SixClub.in — All rights reserved.
         </p>
       </Container>

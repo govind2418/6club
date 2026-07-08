@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/6club-register", label: "Register" },
   { href: "/6club-login", label: "Login" },
-  { href: "/#download", label: "Download" },
+  { href: "/6club-apk-download", label: "Download" },
   { href: "/#faq", label: "FAQ" },
 ];
 

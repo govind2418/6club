@@ -6,6 +6,7 @@ const PAGES = [
   { path: "/6club-register", priority: 0.8 },
   { path: "/6club-login", priority: 0.8 },
   { path: "/6club-game", priority: 0.8 },
+  { path: "/6club-apk-download", priority: 0.8 },
   { path: "/6club-official", priority: 0.6 },
 ];
 

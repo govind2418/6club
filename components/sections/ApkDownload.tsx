@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -56,6 +57,12 @@ export function ApkDownload() {
             ))}
           </ol>
         </div>
+
+        <p className="mt-6 text-center text-sm text-ink/60">
+          <Link href="/6club-apk-download" className="text-gold-light underline underline-offset-2">
+            Read the full APK download &amp; install guide
+          </Link>
+        </p>
       </Container>
     </section>
   );

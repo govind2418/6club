@@ -7,7 +7,7 @@ const FOOTER_LINKS = [
   { href: "/6club-register", label: "6Club Register" },
   { href: "/6club-login", label: "6Club Login" },
   { href: "/6club-game", label: "6Club Game" },
-  { href: "/#download", label: "Download" },
+  { href: "/6club-apk-download", label: "6Club APK Download" },
   { href: "/6club-official", label: "6Club Official?" },
   { href: "/#faq", label: "FAQ" },
 ];

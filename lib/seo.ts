@@ -25,7 +25,7 @@ export const siteConfig = {
  * Swap this constant if a direct APK URL becomes available.
  */
 export const REGISTER_URL =
-  "https://6clubl.com/#/register?invitationCode=642855552519";
+  "https://www.jaiclub15.com/#/register?invitationCode=34881915294";
 export const LOGIN_URL = REGISTER_URL;
 export const APK_DOWNLOAD_URL = REGISTER_URL;
 

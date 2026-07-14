@@ -43,6 +43,24 @@ export function faqPageSchema(items: FaqItem[]) {
   };
 }
 
+export type ItemListEntry = {
+  name: string;
+  url: string;
+};
+
+export function itemListSchema(items: ItemListEntry[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
 export type BreadcrumbTrailItem = {
   name: string;
   path: string;

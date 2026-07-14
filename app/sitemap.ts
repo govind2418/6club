@@ -8,6 +8,7 @@ const PAGES = [
   { path: "/6club-game", priority: 0.8 },
   { path: "/6club-apk-download", priority: 0.8 },
   { path: "/6club-official", priority: 0.6 },
+  { path: "/recommended-games", priority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
